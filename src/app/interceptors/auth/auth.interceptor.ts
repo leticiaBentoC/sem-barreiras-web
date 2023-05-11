@@ -36,7 +36,7 @@ export class AuthInterceptor implements HttpInterceptor {
           this.toastr.error('Tente novamento mais tarde!', 'Erro');
           return;
         }
-        this.toastr.error('Entre novamente!', 'Erro');
+        this.toastr.error('Login ou Senha incorretos. \n Favor tente novamente ou selecione Esqueci a senha.', 'Erro');
         this.authService.clearAuth();
         this.router.navigateByUrl('/entrar');
       }
